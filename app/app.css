@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-forest-green: rgba(046, 125, 50, 100);
+  --color-forest-green-80: rgba(046, 125, 50, 80);
+  --color-forest-green-60: rgba(046, 125, 50, 60);
+  --color-forest-green-40: rgba(046, 125, 50, 40);
+  --color-forest-green-20: rgba(046, 125, 50, 20);
+
+  --color-fresh-leaf: rgba(129, 199, 132, 100);
+  --color-fresh-leaf-80: rgba(129, 199, 132, 80);
+  --color-fresh-leaf-60: rgba(129, 199, 132, 60);
+  --color-fresh-leaf-40: rgba(129, 199, 132, 40);
+  --color-fresh-leaf-20: rgba(129, 199, 132, 20);
+
+  --color-accent: rgba(141, 110, 99, 100);
+  --color-accent-80: rgba(141, 110, 99, 80);
+  --color-accent-60: rgba(141, 110, 99, 60);
+  --color-accent-40: rgba(141, 110, 99, 40);
+  --color-accent-20: rgba(141, 110, 99, 20);
+
+  --color-sunsine-yellow: rgba(255, 235, 59, 100);
+  --color-sunsine-yellow-80: rgba(255, 235, 59, 80);
+  --color-sunsine-yellow-60: rgba(255, 235, 59, 60);
+  --color-sunsine-yellow-40: rgba(255, 235, 59, 40);
+  --color-sunsine-yellow-20: rgba(255, 235, 59, 20);
+
+  --color-charcoal: rgba(51, 51, 51, 100);
+  --color-charcoal-80: rgba(51, 51, 51, 80);
+  --color-charcoal-60: rgba(51, 51, 51, 60);
+  --color-charcoal-40: rgba(51, 51, 51, 40);
+  --color-charcoal-20: rgba(51, 51, 51, 20);
+
+  --color-misty-white: rgba(245, 245, 245, 100);
+  --color-misty-white-80: rgba(245, 245, 245, 80);
+  --color-misty-white-60: rgba(245, 245, 245, 60);
+  --color-misty-white-40: rgba(245, 245, 245, 40);
+  --color-misty-white-20: rgba(245, 245, 245, 20);
+}
+
+html,
+body {
+  @apply bg-misty-white dark:bg-charcoal;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
