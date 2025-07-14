@@ -50,3 +50,9 @@ export interface ResourcesInt {
   title: string;
   icon: JSX.Element;
 }
+
+export interface CountryCodeInt {
+  country: string;
+  code: string;
+  iso: string;
+}
