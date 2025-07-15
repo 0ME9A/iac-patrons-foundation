@@ -49,6 +49,11 @@ export interface ResourcesInt {
   icon: JSX.Element;
 }
 
+export interface VolunteerInt {
+  id: string;
+  title: string;
+}
+
 export interface CountryCodeInt {
   country: string;
   code: string;
@@ -69,5 +74,39 @@ export interface TeamMembersInt {
   social: LinkInt[];
 }
 
-export type SMINames = "twitter" | "linkedin" | "instagram";
-export const SMI_KEYS: SMINames[] = ["twitter", "linkedin", "instagram"];
+export type SMINames = "twitter" | "linkedin" | "instagram" | "facebook";
+export const SMI_KEYS: SMINames[] = [
+  "twitter",
+  "linkedin",
+  "instagram",
+  "facebook",
+];
+
+// contact info
+export interface AddressInt {
+  headOffice: boolean;
+  building: string;
+  near: string;
+  pinCode: string;
+  city: string;
+  state: string;
+  country: string;
+  string: string;
+}
+
+export interface PhoneInt {
+  primary: boolean;
+  code: string;
+  number: string;
+}
+
+export interface EmailInt {
+  id: string;
+  primary: boolean;
+}
+
+export interface ContactInt {
+  address: AddressInt[];
+  phone: PhoneInt[];
+  email: EmailInt[];
+}

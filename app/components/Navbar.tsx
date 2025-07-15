@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import { RiMenu3Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
+import { getSMI } from "~/utils/getIcon";
 import { motion } from "framer-motion";
 import LinkBtn from "./LinkBtn";
 
@@ -77,11 +78,7 @@ export default function Navbar() {
               onClick={() => setMenu(!isMenu)}
               className="p-2 text-lg bg-white rounded-full text-black lg:hidden"
             >
-              {isMenu ? (
-                <MdClose className="text-red-500" />
-              ) : (
-                <RiMenu3Line />
-              )}
+              {isMenu ? <MdClose className="text-red-500" /> : <RiMenu3Line />}
             </motion.button>
           </div>
         </nav>
@@ -169,7 +166,7 @@ export default function Navbar() {
                 target={"_blank"}
                 className="inline-block !p-2"
               >
-                {item.icon}
+                {getSMI(item.title)}
               </LinkBtn>
             ))}
             <span className="w-full border-t border-black/10 block" />

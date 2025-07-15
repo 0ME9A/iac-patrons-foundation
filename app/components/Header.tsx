@@ -36,7 +36,7 @@ export default function Header({
         </span>
       )}
 
-      <h2 className="text-3xl md:text-4xl font-playfair font-bold text-green-900 dark:text-white">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-green-900 dark:text-white">
         {title}
       </h2>
 

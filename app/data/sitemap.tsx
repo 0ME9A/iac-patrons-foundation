@@ -1,11 +1,4 @@
-import { FaInstagram, FaFacebookSquare } from "react-icons/fa"; // ✅ react-icons v4/v5
-import { FaXTwitter } from "react-icons/fa6";
-
-import type {
-  FooterSectionInt,
-  LinkInt,
-  socialMediaLinkInt,
-} from "~/interfaces/data";
+import type { ContactInt, FooterSectionInt, LinkInt } from "~/interfaces/data";
 
 export const headerMenu: LinkInt[] = [
   {
@@ -113,26 +106,53 @@ export const footerSitemap: FooterSectionInt[] = [
   },
 ];
 
-export const socialMedia: socialMediaLinkInt[] = [
+export const socialMedia: LinkInt[] = [
   {
     id: "soc_01",
-    icon: <FaXTwitter />,
     title: "Twitter",
     href: "https://twitter.com/",
     external: true,
   },
   {
     id: "soc_02",
-    icon: <FaInstagram />,
     title: "Instagram",
     href: "https://instagram.com/",
     external: true,
   },
   {
     id: "soc_03",
-    icon: <FaFacebookSquare />,
     title: "Facebook",
     href: "https://facebook.com/",
     external: true,
   },
 ];
+
+// contact info support multiple
+export const contactInfo: ContactInt = {
+  address: [
+    {
+      headOffice: true,
+      building: "3rd Floor",
+      near: "Woodburn Central, 5A Woodburn Park Road",
+      pinCode: "700020",
+      city: "Kolkata",
+      state: "West Bengal",
+      country: "India",
+      string:
+        "3rd Floor, Woodburn Central, 5A Woodburn Park Road, Kolkata – 700020",
+    },
+  ],
+  phone: [
+    {
+      primary: true,
+      code: "+91",
+      number: "919876543210",
+    },
+  ],
+  email: [
+    {
+      primary: true,
+      id: "volunteer@iacpatronsfoundation.org",
+    },
+  ],
+};

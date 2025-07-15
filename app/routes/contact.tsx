@@ -2,7 +2,7 @@ import PageHeader from "~/components/PageHeader";
 
 export default function Contact() {
   return (
-    <main className="pt-16 sm:pt-24 px-2 sm:px-4 space-y-6">
+    <main className="pt-16 sm:pt-24">
       <PageHeader
         title={"Get in Touch"}
         subTitle={`We’d love to hear from you`}

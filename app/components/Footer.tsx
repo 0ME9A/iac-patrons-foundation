@@ -1,5 +1,6 @@
-import { footerSitemap, socialMedia } from "~/data/sitemap";
 import type { FooterSectionInt } from "~/interfaces/data";
+import { footerSitemap, socialMedia } from "~/data/sitemap";
+import { getSMI } from "~/utils/getIcon";
 import { Link } from "react-router";
 import GetInvolved from "~/routes/home/GetInvolved";
 import Contact from "~/routes/home/Contact";
@@ -22,7 +23,7 @@ export default function Footer() {
               action through tree plantation.
             </p>
 
-            <ul className="flex text-xl gap-2 mt-4">
+            <ul className="flex items-center text-xl gap-2 mt-4">
               {socialMedia.map((item) => (
                 <li key={item.id}>
                   <LinkBtn
@@ -30,7 +31,7 @@ export default function Footer() {
                     target={item.external ? "_blank" : "_self"}
                     className="inline-block !p-2"
                   >
-                    {item.icon}
+                    {getSMI(item.title)}
                   </LinkBtn>
                 </li>
               ))}

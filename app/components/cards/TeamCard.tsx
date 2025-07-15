@@ -1,6 +1,6 @@
-import type { SMINames, TeamMembersInt } from "~/interfaces/data";
+import type { TeamMembersInt } from "~/interfaces/data";
+import { getSMI } from "~/utils/getIcon";
 import { Link } from "react-router";
-import { SMI } from "~/data/icons";
 
 interface PropsInt {
   data: TeamMembersInt;
@@ -39,7 +39,7 @@ export default function TeamMemberCard({ data }: PropsInt) {
               rel="noopener noreferrer"
               className="p-2 inline-block rounded-full hover:bg-fresh-leaf-40 duration-300 transition-all"
             >
-              {SMI[item.title.toLowerCase() as SMINames]}
+              {getSMI(item.title)}
             </Link>
           </li>
         ))}
