@@ -1,35 +1,35 @@
-import VolunteerCard from "~/components/cards/BasicCard_2";
+import BasicCard_2 from "~/components/cards/BasicCard_2";
 import Container from "~/components/Container";
 import Header from "~/components/Header";
 
 const volunteers = [
   {
     id: "vol-01",
-    title: "Assisting in tree plantation drives",
+    text: "Assisting in tree plantation drives",
   },
   {
     id: "vol-02",
-    title: "Documenting events (photography, video, social media)",
+    text: "Documenting events (photography, video, social media)",
   },
   {
     id: "vol-03",
-    title: "Conducting eco-awareness sessions in schools",
+    text: "Conducting eco-awareness sessions in schools",
   },
   {
     id: "vol-04",
-    title: "Coordinating local community outreach",
+    text: "Coordinating local community outreach",
   },
   {
     id: "vol-05",
-    title: "Supporting logistics, kits, and resource distribution",
+    text: "Supporting logistics, kits, and resource distribution",
   },
   {
     id: "vol-06",
-    title: "Helping with content, design, or online campaigns",
+    text: "Helping with content, design, or online campaigns",
   },
 ];
 
-export default function HowYouCanHelp() {
+export default function Help() {
   return (
     <Container className="space-y-6 !py-10 sm:!py-16">
       <Header
@@ -42,7 +42,7 @@ export default function HowYouCanHelp() {
       <ul className="grid sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6">
         {volunteers.map((item, i) => (
           <li key={item.id}>
-            <VolunteerCard data={item} index={i} />
+            <BasicCard_2 data={item} index={i} />
           </li>
         ))}
       </ul>

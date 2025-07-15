@@ -1,27 +1,27 @@
-import VolunteerCard from "~/components/cards/BasicCard_2";
+import BasicCard_2 from "~/components/cards/BasicCard_2";
 import Container from "~/components/Container";
 import Header from "~/components/Header";
 
 const volunteers_gain = [
   {
     id: "vol-01",
-    title: "Be part of real environmental action",
+    text: "Be part of real environmental action",
   },
   {
     id: "vol-02",
-    title: "Learn practical sustainability skills",
+    text: "Learn practical sustainability skills",
   },
   {
     id: "vol-03",
-    title: "Earn a certificate of participation",
+    text: "Earn a certificate of participation",
   },
   {
     id: "vol-04",
-    title: "Connect with like-minded green citizens",
+    text: "Connect with like-minded green citizens",
   },
   {
     id: "vol-05",
-    title: "Make measurable impact in your own locality",
+    text: "Make measurable impact in your own locality",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function Gain() {
       <ul className="grid sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6">
         {volunteers_gain.map((item, i) => (
           <li key={item.id}>
-            <VolunteerCard data={item} index={i} />
+            <BasicCard_2 data={item} index={i} />
           </li>
         ))}
       </ul>

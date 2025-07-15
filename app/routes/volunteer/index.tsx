@@ -1,5 +1,5 @@
 import PageHeader from "~/components/PageHeader";
-import HowYouCanHelp from "./HowYouCanHelp";
+import Help from "./Help";
 import Join from "./Join";
 import Gain from "./Gain";
 
@@ -16,7 +16,7 @@ export default function Volunteer() {
         care about the planet, there’s a role for you.
       </p>
       <hr className="opacity-10 mt-16 sm:mt-20 container mx-auto" />
-      <HowYouCanHelp />
+      <Help />
       <Gain />
       <Join />
     </main>

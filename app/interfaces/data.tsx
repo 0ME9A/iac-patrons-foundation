@@ -61,6 +61,11 @@ export interface VolunteerInt {
   title: string;
 }
 
+export interface BasicCard_2 {
+  id: string;
+  text: string;
+}
+
 export interface CountryCodeInt {
   country: string;
   code: string;
