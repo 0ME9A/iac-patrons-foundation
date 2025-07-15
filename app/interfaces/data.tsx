@@ -122,3 +122,13 @@ export interface ContactInt {
   phone: PhoneInt[];
   email: EmailInt[];
 }
+
+export interface CampaignInt {
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  date: string;
+  image: string;
+  link: string;
+}

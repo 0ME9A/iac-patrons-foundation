@@ -8,4 +8,5 @@ export default [
   route("volunteer", "routes/volunteer/index.tsx"),
   route("donate", "routes/donate/index.tsx"),
   route("contact", "routes/contact.tsx"),
+  route("campaigns", "routes/campaigns/index.tsx"),
 ] satisfies RouteConfig;

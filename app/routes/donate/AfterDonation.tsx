@@ -42,11 +42,11 @@ const donationInfo = [
 
 export default function AfterDonation() {
   return (
-    <Container className="">
+    <Container>
       <Header title={"Where Your Money Goes"} description={""} align="l" />
       <ul className="list-disc p-4 space-y-1">
         {donate_01.map((item) => (
-          <li className="">{item.text}</li>
+          <li>{item.text}</li>
         ))}
       </ul>
       <hr className="opacity-10 container mx-auto" />
