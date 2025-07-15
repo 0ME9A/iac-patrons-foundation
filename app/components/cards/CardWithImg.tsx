@@ -1,13 +1,13 @@
-import type { WhyTreesMatterInt } from "~/interfaces/data";
+import type { CardWithImgInt } from "~/interfaces/data";
 
 interface PropsInt {
-  data: WhyTreesMatterInt;
+  data: CardWithImgInt;
 }
 
-export default function WhyTreesMatterCard({ data }: PropsInt) {
+export default function CardWithImg({ data }: PropsInt) {
   return (
     <div
-      className={`p-4 pb-8 bg-fresh-leaf-20 flex flex-col justify-center rounded-3xl gap-4`}
+      className={`p-4 pb-8 bg-fresh-leaf-20 flex flex-col justify-center rounded-3xl gap-4 h-full`}
     >
       <div className="w-full ">
         <img

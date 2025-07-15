@@ -1,4 +1,4 @@
-import VolunteerCard from "~/components/cards/VolunteerCard";
+import VolunteerCard from "~/components/cards/BasicCard_2";
 import Container from "~/components/Container";
 import Header from "~/components/Header";
 

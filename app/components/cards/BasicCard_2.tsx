@@ -7,7 +7,7 @@ interface PropsInt {
 
 export default function VolunteerCard({ data, index }: PropsInt) {
   return (
-    <div className="flex items-start gap-3 bg-fresh-leaf-20 rounded-3xl p-10 relative overflow-hidden">
+    <div className="h-full flex items-start gap-3 bg-fresh-leaf-20 rounded-3xl p-10 relative overflow-hidden">
       <span className="text-xl text-fresh-leaf">
         {index < 10 ? "0" : ""}
         {index + 1}

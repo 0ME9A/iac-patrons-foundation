@@ -3,7 +3,7 @@ import type { JSX } from "react";
 interface PropsInt {
   title: JSX.Element | string;
   subTitle: JSX.Element | string;
-  description?: string;
+  description?: JSX.Element | string;
   className?: string;
 }
 
@@ -14,7 +14,11 @@ export default function PageHeader({
   className,
 }: PropsInt) {
   return (
-    <header className={`flex flex-col gap-4 items-center p-2 sm:p-4 ${className || ""}`}>
+    <header
+      className={`flex flex-col gap-4 items-center p-2 sm:p-4 ${
+        className || ""
+      }`}
+    >
       <h1 className="text-[7vw] lg:text-[5rem] leading-[7vw] lg:leading-[5rem] font-playfair font-bold text-green-900">
         {title}
       </h1>

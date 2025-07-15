@@ -26,6 +26,13 @@ export interface WhyTreesMatterInt {
   img: ImgInt;
 }
 
+export interface CardWithImgInt {
+  id: string;
+  title: string;
+  desc: string;
+  img: ImgInt;
+}
+
 export interface LinkInt {
   id: string;
   title: string;

@@ -36,15 +36,17 @@ export default function Header({
         </span>
       )}
 
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-green-900 dark:text-white">
-        {title}
-      </h2>
+      <div className="space-y-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-green-900 dark:text-white">
+          {title}
+        </h2>
 
-      {subTitle && (
-        <h3 className="text-accent dark:text-accent-80 italic text-lg">
-          {subTitle}
-        </h3>
-      )}
+        {subTitle && (
+          <h3 className="text-accent dark:text-accent-80 italic text-lg">
+            {subTitle}
+          </h3>
+        )}
+      </div>
 
       <p className="text-base sm:text-lg text-charcoal dark:text-misty-white-80 leading-relaxed max-w-prose">
         {description}
