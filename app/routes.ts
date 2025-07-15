@@ -6,6 +6,6 @@ export default [
   route("mission", "routes/mission/index.tsx"),
   route("team", "routes/team.tsx"),
   route("volunteer", "routes/volunteer/index.tsx"),
-  route("donate", "routes/donate.tsx"),
+  route("donate", "routes/donate/index.tsx"),
   route("contact", "routes/contact.tsx"),
 ] satisfies RouteConfig;

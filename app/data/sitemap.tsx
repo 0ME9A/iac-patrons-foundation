@@ -146,7 +146,7 @@ export const contactInfo: ContactInt = {
     {
       primary: true,
       code: "+91",
-      number: "919876543210",
+      number: "9876543210",
     },
   ],
   email: [
