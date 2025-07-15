@@ -14,17 +14,19 @@ export interface WhatWeDoInt {
   color: string;
 }
 
+export interface ImgInt {
+  src: string;
+  alt: string;
+}
+
 export interface WhyTreesMatterInt {
   id: string;
   title: string;
   desc: string;
-  img: {
-    src: string;
-    alt: string;
-  };
+  img: ImgInt;
 }
 
-export interface FooterLinkInt {
+export interface LinkInt {
   id: string;
   title: string;
   href: string;
@@ -32,18 +34,14 @@ export interface FooterLinkInt {
 }
 
 export interface FooterSectionInt {
-  id: string; // useful for iteration keys
+  id: string;
   title: string;
-  links: FooterLinkInt[];
+  links: LinkInt[];
 }
 
-export interface socialMediaLinkInt {
-  id: string;
-  icon: JSX.Element;
-  title: string;
-  href: string;
-  external: boolean;
-}
+// export interface socialMediaLinkInt extends LinkInt {
+//   icon: JSX.Element;
+// }
 
 export interface ResourcesInt {
   id: string;
@@ -56,3 +54,20 @@ export interface CountryCodeInt {
   code: string;
   iso: string;
 }
+
+export interface ImgInt {
+  src: string;
+  alt: string;
+}
+
+export interface TeamMembersInt {
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+  img: ImgInt;
+  social: LinkInt[];
+}
+
+export type SMINames = "twitter" | "linkedin" | "instagram";
+export const SMI_KEYS: SMINames[] = ["twitter", "linkedin", "instagram"];

@@ -1,7 +1,44 @@
 import { FaInstagram, FaFacebookSquare } from "react-icons/fa"; // ✅ react-icons v4/v5
 import { FaXTwitter } from "react-icons/fa6";
 
-import type { FooterSectionInt, socialMediaLinkInt } from "~/interfaces/data";
+import type {
+  FooterSectionInt,
+  LinkInt,
+  socialMediaLinkInt,
+} from "~/interfaces/data";
+
+export const headerMenu: LinkInt[] = [
+  {
+    id: "home",
+    href: "/",
+    title: "Home",
+  },
+  {
+    id: "about",
+    href: "/about",
+    title: "About us",
+  },
+  {
+    id: "mission",
+    href: "/mission",
+    title: "Mission",
+  },
+  {
+    id: "our-team",
+    href: "/team",
+    title: "Our team",
+  },
+  {
+    id: "volunteer",
+    href: "/volunteer",
+    title: "Volunteer",
+  },
+  {
+    id: "contact-us",
+    href: "/contact",
+    title: "Contact us",
+  },
+];
 
 export const footerSitemap: FooterSectionInt[] = [
   {

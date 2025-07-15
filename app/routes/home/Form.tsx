@@ -104,7 +104,7 @@ export default function Form() {
               className="border border-green-900/20 rounded-lg px-2 py-2 text-sm dark:bg-charcoal-20 dark:text-white"
             >
               {countryCode.map((item) => (
-                <option key={item.code} value={item.code}>
+                <option key={item.code + item.iso} value={item.code}>
                   +{item.code} {item.iso}
                 </option>
               ))}

@@ -1,47 +1,18 @@
-import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { MdClose } from "react-icons/md";
-import { RiMenu3Line } from "react-icons/ri";
+import { footerSitemap, headerMenu, socialMedia } from "~/data/sitemap";
 import { Link, useLocation } from "react-router";
-import { footerSitemap, socialMedia } from "~/data/sitemap";
+import { RiMenu3Line } from "react-icons/ri";
+import { useEffect, useState } from "react";
+import { MdClose } from "react-icons/md";
+import { motion } from "framer-motion";
 import LinkBtn from "./LinkBtn";
-
-const NavbarMenu = [
-  {
-    id: "home",
-    href: "/",
-    title: "Home",
-  },
-  {
-    id: "about",
-    href: "/about",
-    title: "About us",
-  },
-  {
-    id: "mission",
-    href: "/mission",
-    title: "Mission",
-  },
-  {
-    id: "our-team",
-    href: "/team",
-    title: "Our team",
-  },
-  {
-    id: "volunteer",
-    href: "/volunteer",
-    title: "Volunteer",
-  },
-  {
-    id: "contact-us",
-    href: "/contact",
-    title: "Contact us",
-  },
-];
 
 export default function Navbar() {
   const path = useLocation();
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenu, setMenu] = useState(false);
+
+  useEffect(() => {
+    setMenu(false);
+  }, [path]);
 
   return (
     <>
@@ -65,7 +36,7 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            {NavbarMenu.slice(1).map((item) => (
+            {headerMenu.slice(1).map((item) => (
               <li
                 key={item.id}
                 className={`h-full text-misty-white-80 hover:text-misty-white border-b-2 border-transparent hover:border-white duration-300 transition-all ${
@@ -103,10 +74,10 @@ export default function Navbar() {
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 1 }}
-              onClick={() => setMenuOpen(!isMenuOpen)}
+              onClick={() => setMenu(!isMenu)}
               className="p-2 text-lg bg-white rounded-full text-black lg:hidden"
             >
-              {isMenuOpen ? (
+              {isMenu ? (
                 <MdClose className="text-red-500" />
               ) : (
                 <RiMenu3Line />
@@ -118,13 +89,13 @@ export default function Navbar() {
       {/* NavbarMenu start */}
       <div
         className={`w-full h-dvh bg-green-900 fixed top-0 z-20 pt-16 p-4 duration-300 transition-all overflow-auto ${
-          isMenuOpen ? "left-0 " : "-left-full"
+          isMenu ? "left-0 " : "-left-full"
         }`}
       >
         <div className="container mx-auto flex flex-col gap-4">
           <ul>
             <li
-              className={`text-misty-white-80 hover:text-misty-white border-l-2 border-transparent hover:border-white duration-300 transition-all ${
+              className={`text-misty-white-80 hover:text-misty-white duration-300 transition-all ${
                 path.pathname === "/"
                   ? "!bg-fresh-leaf-20 shadow-lg shadow-fresh-leaf-20 rounded-full !text-misty-white"
                   : ""
@@ -141,10 +112,10 @@ export default function Navbar() {
                 )}
               </Link>
             </li>
-            {NavbarMenu.slice(1).map((item) => (
+            {headerMenu.slice(1).map((item, i) => (
               <li
-                key={item.id}
-                className={`text-misty-white-80 hover:text-misty-white border-l-2 border-transparent hover:border-white duration-300 transition-all ${
+                key={item.id + i}
+                className={`text-misty-white-80 hover:text-misty-white duration-300 transition-all ${
                   path.pathname.startsWith(item.href)
                     ? "!bg-fresh-leaf-20 rounded-full shadow-lg shadow-fresh-leaf-20 !text-misty-white"
                     : ""
@@ -168,7 +139,7 @@ export default function Navbar() {
             {footerSitemap[1].links.map((item) => (
               <li
                 key={item.id}
-                className={`text-misty-white-80 hover:text-misty-white border-l-2 border-transparent hover:border-white duration-300 transition-all ${
+                className={`text-misty-white-80 hover:text-misty-white duration-300 transition-all ${
                   path.pathname.startsWith(item.href)
                     ? "!bg-fresh-leaf-20 rounded-full shadow-lg shadow-fresh-leaf-20 !text-misty-white"
                     : ""
@@ -193,6 +164,7 @@ export default function Navbar() {
           <div className="flex gap-2 items-center">
             {socialMedia.map((item) => (
               <LinkBtn
+                key={item.id}
                 to={item.href}
                 target={"_blank"}
                 className="inline-block !p-2"
