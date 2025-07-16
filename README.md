@@ -13,9 +13,9 @@ The website serves as the digital platform for our mission:
 ## 🛠 Tech Stack
 
 - **Frontend:** React, Tailwind CSS
-- **Framework:** Vite / Remix / Next.js *(adjust based on actual)*
+- **Framework:** Vite
 - **Language:** TypeScript
-- **Hosting:** Vercel / Netlify *(adjust if needed)*
+- **Hosting:** Vercel
 
 ## 🚫 Contributions
 
