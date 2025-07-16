@@ -1,87 +1,28 @@
-# Welcome to React Router!
+# IAC Patrons Foundation 🌱
 
-A modern, production-ready template for building full-stack React applications using React Router.
+This is the official repository for the **IAC Patrons Foundation** website — a non-profit initiative focused on environmental sustainability, tree plantation, and community education.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🌍 Purpose
 
-## Features
+The website serves as the digital platform for our mission:
+- Share our story and campaigns
+- Facilitate donations and volunteering
+- Showcase impact reports and eco-resources
+- Engage individuals, schools, and organizations
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🛠 Tech Stack
 
-## Getting Started
+- **Frontend:** React, Tailwind CSS
+- **Framework:** Vite / Remix / Next.js *(adjust based on actual)*
+- **Language:** TypeScript
+- **Hosting:** Vercel / Netlify *(adjust if needed)*
 
-### Installation
+## 🚫 Contributions
 
-Install the dependencies:
+This is a **closed-source project** maintained by the internal team of IAC Patrons Foundation.
 
-```bash
-npm install
-```
+> **Note:** We are not accepting contributions or pull requests as this is a private organizational website, not an experimental or community-driven repository.
 
-### Development
+## 📄 License
 
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+All content and source code are © IAC Patrons Foundation. All rights reserved.
