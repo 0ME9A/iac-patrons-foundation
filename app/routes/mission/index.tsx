@@ -1,9 +1,15 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import GrowingBeyondTrees from "./GrowingBeyondTrees";
 import PageHeader from "~/components/PageHeader";
 import Transparency from "./Transparency";
 import WTCTOM from "./WTCTOM";
 import ECAG from "./ECAG";
 import EGF from "./EGF";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.mission();
+}
 
 export default function Mission() {
   return (

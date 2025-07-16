@@ -1,7 +1,13 @@
+import type { Route } from "./+types";
 import { teamMembers } from "~/data/team";
+import { metadata } from "~/metadata";
 import TeamMemberCard from "~/components/cards/TeamCard";
-import Container from "~/components/Container";
 import PageHeader from "~/components/PageHeader";
+import Container from "~/components/Container";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.team();
+}
 
 export default function Team() {
   return (

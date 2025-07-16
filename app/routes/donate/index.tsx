@@ -1,3 +1,5 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 import Container from "~/components/Container";
 import DonationMethod from "./DonationMethod";
@@ -26,6 +28,10 @@ const donate_01 = [
       "By donating to IAC Patrons Foundation, you're not just giving money — you're investing in a cleaner environment, a cooler city, and a better future.",
   },
 ];
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.donate();
+}
 
 export default function Donate() {
   return (

@@ -1,9 +1,15 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 import OurTeamAndValue from "./OurTeamAndValue";
 import WhatWeDo from "./WhatWedo";
 import Mission from "./Mission";
 import Journey from "./Journey";
 import Vision from "./Vision";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.about();
+}
 
 export default function About() {
   return (

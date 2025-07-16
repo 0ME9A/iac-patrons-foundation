@@ -1,8 +1,14 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import PresentationsAndReports from "./PresentationsAndReports";
 import PostersWorksheets from "./PostersWorksheets";
 import ToolkitAndGuides from "./ToolkitAndGuides";
 import PageHeader from "~/components/PageHeader";
 import Videos from "./Videos";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.resources();
+}
 
 export default function Resources() {
   return (

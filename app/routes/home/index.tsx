@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import { Hero } from "./Hero";
 import StatsStatus from "~/components/StatsStatus";
 import WhyTreesMatter from "./WhyTreesMatter";
@@ -7,10 +8,7 @@ import WhatWeDo from "./WhatWeDo";
 import Mission from "./Mission";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+  return metadata.home();
 }
 
 export default function Home() {

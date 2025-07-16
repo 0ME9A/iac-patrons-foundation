@@ -3,6 +3,8 @@ import CampaignCard from "~/components/cards/CampaignCard";
 import StatsStatus from "~/components/StatsStatus";
 import PageHeader from "~/components/PageHeader";
 import Container from "~/components/Container";
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 
 export const campaignsHeader = {
   title: "Our Campaigns",
@@ -10,6 +12,10 @@ export const campaignsHeader = {
   description:
     "From tree plantations to school outreach, every campaign is a step toward ecological restoration. Join hands with us to drive real, measurable change — one tree, one child, one community at a time.",
 };
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.campaigns();
+}
 
 export default function index() {
   return (

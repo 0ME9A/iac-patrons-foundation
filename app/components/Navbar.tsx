@@ -19,12 +19,14 @@ export default function Navbar() {
     <>
       <div className="w-full bg-green-900 sticky top-0 z-50">
         <nav className="container mx-auto py-2 lg:py-0 px-2 sm:px-4 flex justify-between items-center text-white">
-          <div className="flex items-center gap-4">
-            <span className="size-5 rounded-full border-4 border-fresh-leaf inline-block"></span>
-            <Link to="/" title="IAC Patron" className="font-playfair">
-              IAC Patron
-            </Link>
-          </div>
+          <Link
+            to="/"
+            title="IAC Patron"
+            className="font-playfair font-semibold flex items-center gap-4"
+          >
+            <img src="/logo.png" alt="Brand logo" className="size-8" />
+            IAC Patron
+          </Link>
           <ul className="hidden lg:flex text-xs h-full">
             <li
               className={`h-full text-misty-white-80 hover:text-misty-white border-b-2 border-transparent hover:border-white duration-300 transition-all ${
