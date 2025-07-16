@@ -1,6 +1,6 @@
 import Container from "~/components/Container";
-import Header from "~/components/Header";
 import LinkBtn from "~/components/LinkBtn";
+import Header from "~/components/Header";
 
 export default function GetInvolved() {
   return (

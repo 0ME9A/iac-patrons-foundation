@@ -1,35 +1,12 @@
+import { impactStats } from "~/data/stats";
 import { Link } from "react-router";
 import ImpactStatusCard from "~/components/cards/ImpactStatusCard";
 import Container from "~/components/Container";
-import type { ImpactStatusInt } from "~/interfaces/data";
 
 const imgSrc = [
   "https://images.unsplash.com/photo-1695927621677-ec96e048dce2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://plus.unsplash.com/premium_photo-1688572454849-4348982edf7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODV8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
-];
-
-const impactStatus: ImpactStatusInt[] = [
-  {
-    id: "imp-01",
-    number: "85000",
-    text: "Trees planted",
-  },
-  {
-    id: "imp-02",
-    number: "50000",
-    text: "Volunteers Engaged",
-  },
-  {
-    id: "imp-03",
-    number: "25000",
-    text: "Students Educated",
-  },
-  {
-    id: "imp-04",
-    number: "60",
-    text: "Locations Across India",
-  },
 ];
 
 export function Hero() {
@@ -78,7 +55,7 @@ export function Hero() {
       </Container>
       <div className="bg-fresh-leaf">
         <div className="container mx-auto p-2 sm:p-4 grid grid-cols-2 md:grid-cols-4 text-sm md:divide-x divide-green-900/20">
-          {impactStatus.map((item) => (
+          {impactStats.map((item) => (
             <ImpactStatusCard key={item.id} data={item} />
           ))}
         </div>

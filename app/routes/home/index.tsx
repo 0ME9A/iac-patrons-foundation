@@ -1,12 +1,10 @@
 import type { Route } from "./+types";
 import { Hero } from "./Hero";
-import EnvironmentalMission from "./EnvironmentalMission";
+import StatsStatus from "~/components/StatsStatus";
+import WhyTreesMatter from "./WhyTreesMatter";
+import Resources from "./Resources";
 import WhatWeDo from "./WhatWeDo";
 import Mission from "./Mission";
-import WhyTreesMatter from "./WhyTreesMatter";
-import GetInvolved from "./GetInvolved";
-import Resources from "./Resources";
-import Contact from "./Contact";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -23,6 +21,7 @@ export default function Home() {
       <Mission />
       <WhatWeDo />
       <WhyTreesMatter />
+      <StatsStatus />
       <Resources />
     </main>
   );

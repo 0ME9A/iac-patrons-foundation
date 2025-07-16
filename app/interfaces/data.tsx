@@ -2,8 +2,8 @@ import type { JSX } from "react";
 
 export interface ImpactStatusInt {
   id: string;
-  number: string;
-  text: string;
+  value: string;
+  label: string;
 }
 
 export interface WhatWeDoInt {
