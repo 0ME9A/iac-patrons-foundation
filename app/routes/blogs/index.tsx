@@ -1,4 +1,10 @@
 import PageHeader from "~/components/PageHeader";
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.blogs();
+}
 
 export default function index() {
   return (

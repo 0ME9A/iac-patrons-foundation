@@ -1,7 +1,13 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 import Help from "./Help";
 import Join from "./Join";
 import Gain from "./Gain";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.volunteer();
+}
 
 export default function Volunteer() {
   return (

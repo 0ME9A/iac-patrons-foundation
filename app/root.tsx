@@ -32,6 +32,45 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* ✅ Global SEO */}
+        <title>IAC Patrons Foundation – Greening India</title>
+        <meta
+          name="description"
+          content="Join us in building a greener India through tree plantation, environmental education, and community action."
+        />
+        <meta
+          name="keywords"
+          content="tree plantation, green NGO, India, sustainability, reforestation, eco-education"
+        />
+        <meta name="author" content="IAC Patrons Foundation" />
+
+        {/* ✅ Open Graph (for social sharing) */}
+        <meta property="og:title" content="IAC Patrons Foundation" />
+        <meta
+          property="og:description"
+          content="Empowering communities to restore ecological balance through trees and education."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://iacpf.vercel.app" />
+
+        {/* ✅ Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="IAC Patrons Foundation" />
+        <meta
+          name="twitter:description"
+          content="Planting trees, educating youth, and building a greener future."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+
+        {/* ✅ Canonical */}
+        <link rel="canonical" href="https://iacpf.vercel.app" />
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* ✅ Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+
         <Meta />
         <Links />
       </head>

@@ -1,4 +1,10 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.contact();
+}
 
 export default function Contact() {
   return (

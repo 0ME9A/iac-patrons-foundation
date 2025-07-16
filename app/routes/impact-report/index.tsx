@@ -1,8 +1,14 @@
+import type { Route } from "./+types";
+import { metadata } from "~/metadata";
 import StatsStatus from "~/components/StatsStatus";
 import PageHeader from "~/components/PageHeader";
 import GetInvolved from "./GetInvolved";
 import Highlights from "./Highlights";
 import FullReport from "./FullReport";
+
+export function meta({}: Route.MetaArgs) {
+  return metadata.impactReport();
+}
 
 export default function ImpactReport() {
   return (

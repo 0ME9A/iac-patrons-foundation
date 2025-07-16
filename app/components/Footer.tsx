@@ -14,7 +14,12 @@ export default function Footer() {
       <footer className="bg-green-900 pt-16 text-sm">
         <div className="container mx-auto grid gap-10 md:grid-cols-2 p-2 sm:px-4">
           <div className="space-y-2 max-w-md">
-            <h2 className="text-xl font-bold text-white">
+            <img
+              src="/logo.png"
+              alt="Brnad logo"
+              className="size-8 items-center"
+            />
+            <h2 className="text-xl font-bold text-white font-playfair">
               IAC Patrons Foundation
             </h2>
             <p className="text-misty-white-80">
