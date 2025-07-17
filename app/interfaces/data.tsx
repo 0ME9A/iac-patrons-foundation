@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 export interface ImpactStatusInt {
   id: string;
-  value: string;
+  value: number;
   label: string;
 }
 
@@ -131,4 +131,12 @@ export interface CampaignInt {
   date: string;
   image: string;
   link: string;
+}
+
+// tailwindCss breakpoint
+export type BreakpointName = "base" | "sm" | "md" | "lg" | "xl" | "2xl";
+
+export interface BreakpointInfo {
+  name: BreakpointName;
+  width: number;
 }

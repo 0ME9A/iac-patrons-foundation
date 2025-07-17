@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 import OurTeamAndValue from "./OurTeamAndValue";
@@ -13,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function About() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title={"About us"}
         subTitle={"Who we are"}
@@ -28,6 +29,6 @@ export default function About() {
       <Journey />
       <WhatWeDo />
       <OurTeamAndValue />
-    </main>
+    </MainMotion>
   );
 }

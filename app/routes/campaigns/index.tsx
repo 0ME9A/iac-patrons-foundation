@@ -1,10 +1,11 @@
+import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { campaignsData } from "./data";
+import { metadata } from "~/metadata";
 import CampaignCard from "~/components/cards/CampaignCard";
 import StatsStatus from "~/components/StatsStatus";
 import PageHeader from "~/components/PageHeader";
 import Container from "~/components/Container";
-import type { Route } from "./+types";
-import { metadata } from "~/metadata";
 
 export const campaignsHeader = {
   title: "Our Campaigns",
@@ -19,7 +20,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function index() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader {...campaignsHeader} />
       {/* <hr className="opacity-10 mt-16 sm:mt-20 container mx-auto" /> */}
 
@@ -31,6 +32,6 @@ export default function index() {
         </div>
       </Container>
       <StatsStatus />
-    </main>
+    </MainMotion>
   );
 }

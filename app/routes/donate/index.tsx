@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 import Container from "~/components/Container";
@@ -35,7 +36,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Donate() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title={"Your Donation Plants Hope"}
         subTitle={"Lend a helping hand for our children's future."}
@@ -70,6 +71,6 @@ export default function Donate() {
       <AfterDonation />
       <DonationMethod />
       <FinalCall />
-    </main>
+    </MainMotion>
   );
 }

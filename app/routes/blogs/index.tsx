@@ -1,6 +1,7 @@
-import PageHeader from "~/components/PageHeader";
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
+import PageHeader from "~/components/PageHeader";
 
 export function meta({}: Route.MetaArgs) {
   return metadata.blogs();
@@ -8,7 +9,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function index() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title="Insights & Stories"
         subTitle="Explore our journey toward a greener planet."
@@ -16,6 +17,6 @@ export default function index() {
       />
       <hr className="opacity-10 mt-16 sm:mt-20 container mx-auto" />
       <p className="text-center p-4">Coming soon...</p>
-    </main>
+    </MainMotion>
   );
 }

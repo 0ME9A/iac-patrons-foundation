@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import GrowingBeyondTrees from "./GrowingBeyondTrees";
 import PageHeader from "~/components/PageHeader";
@@ -13,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Mission() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title={"Our Core Mission"}
         subTitle={`Our mission is simple, urgent, and rooted in action.`}
@@ -34,6 +35,6 @@ export default function Mission() {
       <EGF />
       <Transparency />
       <GrowingBeyondTrees />
-    </main>
+    </MainMotion>
   );
 }
