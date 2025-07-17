@@ -1,14 +1,18 @@
+import { WhatWeDoCardMotion } from "~/components/cards/WhatWeDoCard";
+import { HeaderMotion } from "~/components/Header";
 import { whatWeDo } from "~/data/whatWeDo";
 import { MdWork } from "react-icons/md";
-import WhatWeDoCard from "~/components/cards/WhatWeDoCard";
+import { motion } from "motion/react";
+import useBreakpoint from "~/hooks/useBreakpoint";
 import Container from "~/components/Container";
-import Header from "~/components/Header";
 
 export default function WhatWeDo() {
+  const breakpoint = useBreakpoint();
+
   return (
     <Container>
-      <div className="space-y-10">
-        <Header
+      <motion.div className="space-y-10">
+        <HeaderMotion
           id="#what-we-do"
           icon={<MdWork />}
           title={"What We Do"}
@@ -16,11 +20,16 @@ export default function WhatWeDo() {
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6">
-          {whatWeDo.map((item) => (
-            <WhatWeDoCard key={item.id} data={item} />
+          {whatWeDo.map((item, i) => (
+            <WhatWeDoCardMotion
+              key={item.id}
+              data={item}
+              index={i}
+              breakpoint={breakpoint}
+            />
           ))}
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 }

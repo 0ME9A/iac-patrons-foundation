@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import StatsStatus from "~/components/StatsStatus";
 import PageHeader from "~/components/PageHeader";
@@ -12,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function ImpactReport() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title="Impact Report"
         subTitle="Transparency, Community, and Green Change"
@@ -23,6 +24,6 @@ export default function ImpactReport() {
       <Highlights />
       <FullReport />
       <GetInvolved />
-    </main>
+    </MainMotion>
   );
 }

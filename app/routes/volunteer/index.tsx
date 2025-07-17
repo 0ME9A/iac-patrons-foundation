@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 import Help from "./Help";
@@ -11,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Volunteer() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title={"Volunteer With Us"}
         subTitle={`Join us in making India greener, cleaner, and more sustainable — one tree at a time.`}
@@ -25,6 +26,6 @@ export default function Volunteer() {
       <Help />
       <Gain />
       <Join />
-    </main>
+    </MainMotion>
   );
 }

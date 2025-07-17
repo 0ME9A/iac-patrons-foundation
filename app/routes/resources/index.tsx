@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import PresentationsAndReports from "./PresentationsAndReports";
 import PostersWorksheets from "./PostersWorksheets";
@@ -12,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Resources() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title={"Resources & Toolkits"}
         subTitle={`Empowering individuals and communities through knowledge and action.`}
@@ -45,6 +46,6 @@ export default function Resources() {
         </ul>
       </section> */}
       <PresentationsAndReports />
-    </main>
+    </MainMotion>
   );
 }

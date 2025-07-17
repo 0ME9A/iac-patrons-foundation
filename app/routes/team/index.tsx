@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { teamMembers } from "~/data/team";
 import { metadata } from "~/metadata";
 import TeamMemberCard from "~/components/cards/TeamCard";
@@ -11,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Team() {
   return (
-    <main className="pt-16 sm:pt-24 space-y-6">
+    <MainMotion>
       <PageHeader
         title={"Our Team"}
         subTitle={`Let's meat our team`}
@@ -28,6 +29,6 @@ export default function Team() {
           ))}
         </div>
       </Container>
-    </main>
+    </MainMotion>
   );
 }

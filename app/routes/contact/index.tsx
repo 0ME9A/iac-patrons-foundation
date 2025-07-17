@@ -1,4 +1,5 @@
 import type { Route } from "./+types";
+import { MainMotion } from "~/components/Main";
 import { metadata } from "~/metadata";
 import PageHeader from "~/components/PageHeader";
 
@@ -8,7 +9,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Contact() {
   return (
-    <main className="pt-16 sm:pt-24">
+    <MainMotion>
       <PageHeader
         title={"Get in Touch"}
         subTitle={`We’d love to hear from you`}
@@ -17,6 +18,6 @@ export default function Contact() {
         happy to assist you with any questions, feedback, or collaboration
         ideas.`}
       />
-    </main>
+    </MainMotion>
   );
 }

@@ -1,10 +1,13 @@
+import { FaBook, FaTools, FaImage, FaSchool } from "react-icons/fa";
+import { ResourceCardMotion } from "~/components/cards/ResourceCard";
+import { motion, useScroll, useTransform } from "motion/react";
+import { HeaderMotion } from "~/components/Header";
+import { RiFolderZipFill } from "react-icons/ri";
+import { GrResources } from "react-icons/gr";
+import { useRef } from "react";
+import useBreakpoint from "~/hooks/useBreakpoint";
 import Container from "~/components/Container";
 import LinkBtn from "~/components/LinkBtn";
-import { FaBook, FaTools, FaImage, FaSchool } from "react-icons/fa";
-import ResourceCard from "~/components/cards/ResourceCard";
-import { RiFolderZipFill } from "react-icons/ri";
-import Header from "~/components/Header";
-import { GrResources } from "react-icons/gr";
 
 const resources = [
   {
@@ -30,12 +33,21 @@ const resources = [
 ];
 
 export default function ResourcesSection() {
+  const breakpoint = useBreakpoint();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.7 1"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
-    <div>
+    <div className="overflow-y-hidden">
       <Container>
         <div className="rounded-3xl">
           <div className="space-y-6">
-            <Header
+            <HeaderMotion
               icon={<GrResources />}
               title={"Resources"}
               description={`Explore our growing library of tools and knowledge to support your green initiatives.`}
@@ -43,18 +55,27 @@ export default function ResourcesSection() {
 
             <div className="grid sm:grid-cols-2 gap-2 sm:gap-4 lg:gap-6">
               {resources.map((item, i) => (
-                <ResourceCard key={item.id} data={item} index={i} />
+                <ResourceCardMotion
+                  key={item.id}
+                  data={item}
+                  index={i}
+                  breakpoint={breakpoint}
+                />
               ))}
             </div>
             <hr className="opacity-10" />
-            <div className="flex items-center justify-end gap-3 bg-fresh-leaf-20 rounded-3xl p-10 relative overflow-hidden">
+            <motion.div
+              ref={ref}
+              style={{ y, opacity }}
+              className="flex items-center justify-end gap-3 bg-fresh-leaf-20 rounded-3xl p-10 relative overflow-hidden"
+            >
               <LinkBtn to="/resources" title="Download Now" className="">
                 Download now
               </LinkBtn>
               <span className="absolute text-[5rem] font-black text-fresh-leaf opacity-20 left-10 scale-200 rotate-12">
                 <RiFolderZipFill />
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>
